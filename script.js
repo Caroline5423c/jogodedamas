@@ -120,7 +120,7 @@ function clearHighlights() {
 
 function switchPlayer() {
   currentPlayer = currentPlayer === 'red' ? 'black' : 'red';
-  turnDisplay.textContent = `Vez do jogador: ${currentPlayer === 'red' ? '🔴 Vermelho' : '⚫ Preto'}`;
+  turnDisplay.textContent = `Vez do jogador: ${currentPlayer === 'Pink' ? '🔴 Vermelho' : '⚫ light blue'}`;
 }
 
 createBoard();
