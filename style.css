@@ -1,29 +1,66 @@
-/* style.css */
-#game {
-  width: 600px;
-  height: 200px;
-  background: #2393dd;
-  position: relative;
-  overflow: hidden;
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
 }
-#dino {
+
+h1 {
+  margin-top: 20px;
+}
+
+#turn {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  grid-template-rows: repeat(8, 60px);
+  margin: 20px auto;
+  width: 480px;
+  height: 480px;
+  border: 2px solid #333;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.light {
+  background-color: #eee;
+}
+
+.dark {
+  background-color: #444;
+}
+
+.piece {
   width: 40px;
   height: 40px;
-  background: rgb(180, 54, 124);
+  border-radius: 50%;
   position: absolute;
-  bottom: 0;
-  left: 50px;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
-#obstacle {
-  width: 20px;
-  height: 40px;
-  background: rgb(105, 71, 150);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  animation: move 2s infinite linear;
+
+.red {
+  background-color: red;
 }
-@keyframes move {
-  from { right: -20px; }
-  to { right: 600px; }
+
+.black {
+  background-color: black;
+}
+
+.selected {
+  outline: 3px solid yellow;
+  transform: scale(1.1);
+}
+
+.highlight {
+  outline: 3px solid yellow;
 }
