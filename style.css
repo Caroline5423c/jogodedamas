@@ -1,66 +1,29 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f0f0f0;
-}
-
-h1 {
-  margin-top: 20px;
-}
-
-#turn {
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-#board {
-  display: grid;
-  grid-template-columns: repeat(8, 60px);
-  grid-template-rows: repeat(8, 60px);
-  margin: 20px auto;
-  width: 480px;
-  height: 480px;
-  border: 2px solid #333;
-}
-
-.square {
-  width: 60px;
-  height: 60px;
+/* style.css */
+#game {
+  width: 600px;
+  height: 200px;
+  background: #2393dd;
   position: relative;
+  overflow: hidden;
 }
-
-.light {
-  background-color: #eee;
-}
-
-.dark {
-  background-color: #444;
-}
-
-.piece {
+#dino {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  background: rgb(180, 54, 124);
   position: absolute;
-  top: 10px;
-  left: 10px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+  bottom: 0;
+  left: 50px;
 }
-
-.red {
-  background-color: red;
+#obstacle {
+  width: 20px;
+  height: 40px;
+  background: rgb(105, 71, 150);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: move 2s infinite linear;
 }
-
-.black {
-  background-color: black;
-}
-
-.selected {
-  outline: 3px solid yellow;
-  transform: scale(1.1);
-}
-
-.highlight {
-  outline: 3px solid yellow;
+@keyframes move {
+  from { right: -20px; }
+  to { right: 600px; }
 }
